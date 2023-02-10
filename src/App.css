@@ -1,38 +1,95 @@
-.App {
+header {
+  background-color: #092d38;
+  top: 0;
+  color: #fff;
+  position: absolute;
+  padding: 20px;
+  text-align: left;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #00ccaa;
+}
+
+nav a.active {
+  background-color: #1e88e5;
+}
+
+.App {
+  background: linear-gradient(to bottom, #3498DB, #8bc5e3);
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.submit-form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: white;
+  max-width: 500px;
+  margin: 50px auto;
+  transition: box-shadow 0.5s;
+}
+
+.submit-form:focus-within {
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #3498DB;
   color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="submit"]:hover {
+  background-color: #2980B9;
 }
